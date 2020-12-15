@@ -58,6 +58,7 @@ class VQADataset(Dataset):
     return (image, question, answer)
 
 def load_dataloaders(path, image_folder, descriptor, batch_size=10):
+    print(f"Batch Size: {batch_size}")
     # Exemples de transformation.
     transform = transforms.Compose(
         [transforms.Resize((224,224)),
@@ -71,6 +72,7 @@ def load_dataloaders(path, image_folder, descriptor, batch_size=10):
     # Permet de contrôler l'aléatoire pour pouvoir reproduire les résultats.
     np.random.seed(1)
     torch.manual_seed(1)
+    torch.cuda.manual_seed(1)
 
     indices = np.arange(0, len(vqa_dataset))
     np.random.shuffle(indices)

@@ -27,7 +27,7 @@ def init_argparse() -> argparse.ArgumentParser:
     parser.add_argument("--learning_rate", "-r", type=float, default=1e-4, dest="LEARNING_RATE")
     parser.add_argument("--save_info", "-si", type=str, default="", dest="SAVE_INFO")
     parser.add_argument("--save_model", "-sm", type=str, default="", dest="SAVE_MODEL")
-    parser.add_argument("--hidden", "-hd", type=int, default=1000, dest="HIDDEN")
+    parser.add_argument("--hidden", "-hd", type=int, default=1024, dest="HIDDEN")
     parser.add_argument("--from_pretrained", "-p", type=str, default="", dest="PRETRAINED_MODEL")
 
     return parser

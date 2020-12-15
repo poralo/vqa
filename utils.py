@@ -6,7 +6,7 @@ import time
 
 
 def evaluate(model, tokenizer, device, test_dataloader):
-    """Une simple fonction permettant d'évaluer la précision du model sur
+    """Une simple fonction permettant d'évaluer la précision du modèle sur
     un jeu de test"""
 
     loss_fn = torch.nn.CrossEntropyLoss(reduction='mean')
