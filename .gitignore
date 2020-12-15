@@ -1,0 +1,4 @@
+*.pt
+boolean_answers_dataset_10000
+boolean_answers_dataset_200
+__pycache__
